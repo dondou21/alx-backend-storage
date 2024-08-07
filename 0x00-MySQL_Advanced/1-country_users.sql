@@ -5,7 +5,7 @@
 -- country enumeration of countries: US, CO, Tn, never null (default will be US)
 -- If the table already exist the script should not fail
 
-DROP TABLE IF EXIST users;
+DROP TABLE IF EXISTS users;
 CREATE TABLE users (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY;
     email VARCHAR(255) NOT NULL UNIQUE;
