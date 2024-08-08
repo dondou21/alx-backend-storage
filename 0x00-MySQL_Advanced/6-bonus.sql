@@ -12,15 +12,15 @@ BEGIN
         INTO project_count
         FROM projects
         WHERE name = project_name;
-    IF project_name = 0 THEN
-        INSERT INTO project(name)
+    IF project_count = 0 THEN
+        INSERT INTO projects(name)
             VALUES(project_name);
     END IF;
-    SELECT id 
+    SELECT id
         INTO project_id
         FROM projects
         WHERE name = project_name;
-    INSERT INTO correction(user_id, project_id, score)
+    INSERT INTO corrections(user_id, project_id, score)
         VALUES (user_id, project_id, score);
-    EDN $$
-    DELIMITER ;
+END $$
+DELIMITER ;
