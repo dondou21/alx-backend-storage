@@ -1,7 +1,7 @@
 -- SQL script that creates a stored procedure 'AddBonus' thas adds a news correctioon for a student
 -- Code in SQL is a nice level up !
 
-DROP PROCDURE IF EXISTS AddBonus;
+DROP PROCEDURE IF EXISTS AddBonus;
 DELIMITER $$
 CREATE PROCEDURE AddBonus (user_id INT, project_name VARCHAR(255), score FLOAT)
 BEGIN
